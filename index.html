@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Creative Webpage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      color: #333;
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px #fff8;
+    }
+    button {
+      background: #43c6ac;
+      color: #fff;
+      border: none;
+      padding: 1em 2em;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px #43c6ac44;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background: #191654;
+      transform: scale(1.05);
+    }
+    #message {
+      margin-top: 2em;
+      font-size: 1.5rem;
+      color: #191654;
+      min-height: 2em;
+      transition: color 0.3s;
+    }
+    .emoji {
+      font-size: 2rem;
+      margin-left: 0.5em;
+    }
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #333a;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌟 Welcome to My Creative Webpage! 🌟</h1>
+  <button onclick="showMessage()">Surprise Me!</button>
+  <p id="message"></p>
+  <footer>
+    &copy; 2025 | Designed with <span class="emoji">💡</span> by You
+  </footer>
+  <script>
+    function showMessage() {
+      const messages = [
+        "Hello, world! <span class='emoji'>👋</span>",
+        "Have a fantastic day! <span class='emoji'>🌈</span>",
+        "Keep learning and growing! <span class='emoji'>🚀</span>",
+        "You are awesome! <span class='emoji'>😎</span>",
+        "Smile and shine! <span class='emoji'>✨</span>"
+      ];
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById('message').innerHTML = msg;
+    }
+  </script>
+</body>
+</html>
